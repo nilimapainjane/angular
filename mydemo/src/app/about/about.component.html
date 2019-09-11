@@ -1,0 +1,33 @@
+<p>about works!</p>
+
+<div class="container justify-content-center">
+    <div class="row">
+
+<ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link" routerLink='about1'>About1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink='about2'>About2</a>
+        </li>
+      
+    </ul>
+</div>
+<div class="row">
+
+        <router-outlet></router-outlet>
+</div>
+
+<ul class="list-inline" 
+*ngFor="let pro of products">
+    <li>
+        <a routerLink="/product/{{pro.id}}">
+         {{pro.name}}
+        </a>
+    </li>
+</ul>
+</div>
+
+    
+
+

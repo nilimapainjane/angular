@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+
+            <div class="container">
+                <form #F="ngForm" (ngSubmit)="save(F.value)">
+                    <div class="form-group">
+                        <label class="col-sm-1-12 col-form-label">First Name</label>
+                        <div class="col-sm-1-12">
+                            <input type="text" class="form-control"
+                             name="fname" 
+                             [(ngModel)]="model.fname"
+                             #fname=ngModel 
+                             required>
+                        </div>
+                        <div *ngIf="fname.errors && fname.touched">
+                            <div class="alert alert-danger"
+                            *ngIf="fname.errors.required">
+                            Please enter first name
+                            </div>
+                        </div>
+
+                    </div>
+                    
+
+                    <div class="form-group ">
+                        <label class="col-sm-1-12 col-form-label">Last Name</label>
+                        <div class="col-sm-1-12">
+                            <input type="text" class="form-control"
+                            name="lname"
+                            [(ngModel)]="model.lname" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-1-12 col-form-label">Email ID</label>
+                        <div class="col-sm-1-12">
+                            <input type="text" class="form-control"
+                            name="emailid"
+                            [(ngModel)]="model.emailid" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-1-12 col-form-label">Password</label>
+                        <div class="col-sm-1-12">
+                            <input type="password" class="form-control"
+                            name="password"
+                            [(ngModel)]="model.password" required>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="form-group ">
+                        <label class="col-sm-1-12 col-form-label">Country</label>
+                        <div class="col-sm-1-12">
+
+                      <select class="form-control" name="country" [{ngModel}]="model.country">
+                        <option>India</option>
+                        <option>USA</option>
+                        <option>Australia</option>
+                      </select>
+                    
+                        </div>
+                    </div> -->
+
+                    <div class="form-group">
+                        <label class="col-sm-1-12 col-form-label">Address</label>
+                        <div class="col-sm-1-12">
+                            <input type="text" class="form-control"
+                            name="address"
+                            [(ngModel)]="model.address">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="offset-sm-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Action</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
