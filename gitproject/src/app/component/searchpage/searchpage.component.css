@@ -1,0 +1,26 @@
+
+
+.leftcontent
+{
+    margin-top: 10px;
+    
+}
+
+
+.rightcontent
+{
+    margin-top: 10px;
+}
+
+.hlabel{
+    font-size:18px;
+}
+
+.main{
+  background-color: antiquewhite;
+}
+.search{
+    padding: 10px 10px 10px 10px;
+
+    background-color: aquamarine;
+}

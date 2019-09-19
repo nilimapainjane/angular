@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+
+
+        <div class="col-md-8"> 
+            <div class="leftcontent">
+                    <div class="form-group search">
+                       <label class="control-label col-sm-2" for="email">Search :</label>               
+                        <input type="text" class="form-control" name="Search" placeholder="Search here.." #box (keyup.enter)="onEnter(box.value)"> 
+
+                          {{value}}
+                                        
+                    </div>                      
+                   
+                   <div class="row">
+                    <div class="col-sm-3"  *ngFor="let data of gitfollowersdata"><img src="{{data.avatar_url}}" class="img img-thumbnail"> {{data.login}}</div>
+                   
+                   </div>   
+        </div>
+    </div>
+
+
+
+<div class="col-md-4"> 
+<div class="rightcontent">
+    <div class="row">
+            <div class="col-md-5">
+              <img src="{{gituserdetails.avatar_url}}" class="img img-thumbnail">
+            </div>
+                
+            <div class="col-md-7">
+                <div><strong>Login:</strong>{{gituserdetails.login}}</div>
+                <div><strong>Id:</strong>{{gituserdetails.id}}</div>
+            </div>
+            <div class="col-md-12">
+                    <p><strong>Location:</strong> {{gituserdetails.location}}</p>
+                    <p><strong>Blog:</strong>{{gituserdetails.blog}}</p>
+                    <p><strong>Followers:</strong>{{gituserdetails.followers}}</p>                   
+                    <p><strong>Following:</strong>{{gituserdetails.following}}</p>
+        
+            </div>
+    </div>
+   
+            
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+     
+
+  
+
